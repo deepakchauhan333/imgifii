@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 260 100% 4%;
+  --foreground: 210 40% 98%;
+  --card: 260 100% 7%;
+  --card-foreground: 0 0% 98%;
+  --popover: 260 100% 4%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 252 100% 69%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 280 100% 59%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 260 30% 12%;
+  --muted-foreground: 210 40% 70%;
+  --accent: 300 100% 59%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 260 30% 15%;
+  --input: 260 30% 12%;
+  --ring: 252 100% 69%;
+}
+
+body {
+  @apply bg-[#0A041D] text-white;
+}
+
+.card-glow {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  background: linear-gradient(145deg, rgba(15, 6, 39, 0.9), rgba(15, 6, 39, 0.95));
+  backdrop-filter: blur(10px);
+}
+
+.card-glow:hover {
+  transform: translateY(-5px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 8px 20px -6px rgba(139, 92, 246, 0.5);
+}
+
+.category-card {
+  background: linear-gradient(145deg, rgba(15, 6, 39, 0.8), rgba(42, 27, 84, 0.4));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.particle-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+  opacity: 0.6;
+  pointer-events: none;
+}
