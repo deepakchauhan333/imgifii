@@ -19,3 +19,12 @@ export interface Tool {
   created_at: string;
   updated_at: string;
 }
+
+export interface Bike {
+  id: number;
+  name: string;
+  image_url?: string;
+  description: string;
+  price_per_hour: number;
+  available: boolean;
+}
